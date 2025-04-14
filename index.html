@@ -1,83 +1,189 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mua các sản phẩm chăm sóc sắc đẹp tại Sí Cosmetic">
-    <title>Sí Cosmetic</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #3b8d99;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .product {
-            background-color: white;
-            margin: 10px;
-            padding: 15px;
-            width: 250px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #3b8d99;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sí Cosmetic - Chăm sóc sắc đẹp mỗi ngày">
+  <title>Sí Cosmetic</title>
+  <style>
+    :root {
+      --pink: #fcd6e2;
+      --yellow: #fff7c7;
+      --gray: #ccc;
+      --text-gray: #666;
+      --text-black: #000;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--white);
+      color: var(--text-black);
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--text-black);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav li a {
+      text-decoration: none;
+      color: var(--text-gray);
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+
+    nav li a:hover {
+      color: var(--text-black);
+      font-weight: bold;
+    }
+
+    /* Banner */
+    .banner {
+      background: linear-gradient(90deg, var(--pink), var(--yellow));
+      padding: 60px 30px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--text-black);
+    }
+
+    /* Product section */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: var(--white);
+      width: 250px;
+      padding: 15px;
+      border: 1px solid var(--gray);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: var(--text-gray);
+      margin-bottom: 10px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      background-color: var(--pink);
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: var(--text-black);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .product-card a:hover {
+      background-color: var(--yellow);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--pink);
+      color: var(--text-black);
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với Sí Cosmetic!</h1>
-        <p>Chăm sóc sắc đẹp cho bạn, mỗi ngày</p>
-    </header>
+  <header>
+    <div class="logo">
+      <!-- Thay ảnh logo nếu có -->
+      <img src="https://via.placeholder.com/40x40.png?text=Sí" alt="Logo" />
+      <span>Sí Cosmetic</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="products">
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Sản phẩm 1">
-            <h3>Sản phẩm 1</h3>
-            <p>Giới thiệu sản phẩm 1.</p>
-            <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
-        </div>
+  <div class="banner">
+    Chào mừng đến với Sí Cosmetic – Làm đẹp mỗi ngày!
+  </div>
 
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Sản phẩm 2">
-            <h3>Sản phẩm 2</h3>
-            <p>Giới thiệu sản phẩm 2.</p>
-            <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
-        </div>
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Sản phẩm 1" />
+      <h3>Sản phẩm 1</h3>
+      <p>Mô tả ngắn gọn sản phẩm 1</p>
+      <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
+    </div>
 
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Sản phẩm 3">
-            <h3>Sản phẩm 3</h3>
-            <p>Giới thiệu sản phẩm 3.</p>
-            <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
-        </div>
-    </section>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Sản phẩm 2" />
+      <h3>Sản phẩm 2</h3>
+      <p>Mô tả ngắn gọn sản phẩm 2</p>
+      <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
+    </div>
 
-    <footer>
-        <p>© 2025 Sí Cosmetic. Tất cả quyền được bảo vệ.</p>
-    </footer>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200" alt="Sản phẩm 3" />
+      <h3>Sản phẩm 3</h3>
+      <p>Mô tả ngắn gọn sản phẩm 3</p>
+      <a href="https://shopee.vn/sicosmetic" target="_blank">Mua ngay</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sí Cosmetic – Hotline: 0916180893 | 0772633355
+  </footer>
 </body>
 </html>
